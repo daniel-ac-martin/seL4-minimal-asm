@@ -16,16 +16,16 @@ set(KernelDangerousCodeInjection OFF CACHE BOOL "")
 set(KernelFastpath ON CACHE BOOL "")
 #set(KernelPrinting OFF CACHE BOOL "")
 set(KernelPrinting ON CACHE BOOL "") # For debug
-#set(KernelNumDomains 16 CACHE STRING "")
-set(KernelNumDomains 1 CACHE STRING "") # To copy tutorial (no known benefit)
-#set(KernelRootCNodeSizeBits 19 CACHE STRING "")
-set(KernelRootCNodeSizeBits 16 CACHE STRING "") # To copy tutorial (no known benefit)
+set(KernelNumDomains 16 CACHE STRING "")
+#set(KernelNumDomains 1 CACHE STRING "") # To copy tutorial (no known benefit)
+set(KernelRootCNodeSizeBits 19 CACHE STRING "")
+#set(KernelRootCNodeSizeBits 16 CACHE STRING "") # To copy tutorial (no known benefit)
 #set(KernelMaxNumBootinfoUntypedCaps 50 CACHE STRING "")
 set(KernelMaxNumBootinfoUntypedCaps 230 CACHE STRING "") # To copy tutorial (Avoids: Kernel init: Too many untyped regions for boot info)
 #set(KernelFSGSBase "inst" CACHE STRING "")
 
 #set(KernelIsMCS OFF CACHE BOOL "")
-#set(KernelIsMCS ON CACHE BOOL "") # Seems to break things (unknown syscall)
+#set(KernelIsMCS ON CACHE BOOL "") # Seems to break things
 
 # Simulation support
 set(KernelSupportPCID OFF CACHE BOOL "" FORCE)
@@ -36,4 +36,3 @@ set(KernelFPU FXSAVE CACHE STRING "" FORCE)
 # Debugging
 set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "" FORCE)
 set(KernelDebugBuild ON CACHE BOOL "" FORCE)
-set(LibSel4PlatSupportUseDebugPutChar true CACHE BOOL "" FORCE)
